@@ -1,11 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { Leaf, ShieldCheck, Microscope, Bot } from "lucide-react";
+import { Leaf, ShieldCheck, Microscope, Bot, History, BrainCircuit, BarChart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export default function Home() {
   const heroImage = getPlaceholderImage("hero");
+  const testimonial1Avatar = getPlaceholderImage("testimonial1-avatar");
+  const testimonial2Avatar = getPlaceholderImage("testimonial2-avatar");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -21,6 +26,12 @@ export default function Home() {
           <Link href="#how-it-works" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             How It Works
           </Link>
+          <Link href="#testimonials" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            Testimonials
+          </Link>
+           <Link href="#faq" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            FAQ
+          </Link>
           <Link href="/login">
             <Button>Get Started</Button>
           </Link>
@@ -30,7 +41,7 @@ export default function Home() {
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4">
+              <div className="flex flex-col justify-center space-y-4 animate-fade-in-up">
                 <div className="space-y-2">
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
                     Protect Your Harvest with AI-Powered Insights
@@ -51,7 +62,7 @@ export default function Home() {
                 height={400}
                 alt={heroImage.description}
                 data-ai-hint={heroImage.imageHint}
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last animate-fade-in"
               />}
             </div>
           </div>
@@ -68,33 +79,66 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:max-w-none mt-12">
-              <div className="grid gap-1 text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Microscope className="h-8 w-8" />
+              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
+                <div className="flex items-center gap-3 mb-2">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Microscope className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-lg font-bold font-headline">Instant Diagnosis</h3>
                 </div>
-                <h3 className="text-lg font-bold font-headline">Instant Diagnosis</h3>
-                <p className="text-sm text-muted-foreground">Upload a photo of your crop to get an AI-powered disease diagnosis in seconds.</p>
+                <p className="text-sm text-muted-foreground">Upload a photo of your crop to get an AI-powered disease diagnosis with high accuracy in seconds.</p>
               </div>
-              <div className="grid gap-1 text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Bot className="h-8 w-8" />
+              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
+                <div className="flex items-center gap-3 mb-2">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                     <BrainCircuit className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-lg font-bold font-headline">AI-Driven Advice</h3>
                 </div>
-                <h3 className="text-lg font-bold font-headline">AI-Driven Recommendations</h3>
                 <p className="text-sm text-muted-foreground">Receive tailored treatment and prevention strategies based on the diagnosis and local environmental data.</p>
               </div>
-              <div className="grid gap-1 text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <ShieldCheck className="h-8 w-8" />
+              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
+                <div className="flex items-center gap-3 mb-2">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                     <ShieldCheck className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-lg font-bold font-headline">Proactive Alerts</h3>
                 </div>
-                <h3 className="text-lg font-bold font-headline">Proactive Alerts</h3>
                 <p className="text-sm text-muted-foreground">Get notified about potential disease outbreaks based on real-time weather and IoT data from your farm.</p>
+              </div>
+              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
+                <div className="flex items-center gap-3 mb-2">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                     <History className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-lg font-bold font-headline">Historical Tracking</h3>
+                </div>
+                <p className="text-sm text-muted-foreground">Maintain a record of all diagnoses to track disease history and the effectiveness of treatments over time.</p>
+              </div>
+              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
+                <div className="flex items-center gap-3 mb-2">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                     <BarChart className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-lg font-bold font-headline">Environmental Monitoring</h3>
+                </div>
+                <p className="text-sm text-muted-foreground">Connect your farm's IoT sensors to monitor key environmental factors like humidity, temperature, and soil moisture.</p>
+              </div>
+              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
+                <div className="flex items-center gap-3 mb-2">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                     <Bot className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-lg font-bold font-headline">Expert Consultation</h3>
+                </div>
+                <p className="text-sm text-muted-foreground">Chat with agricultural experts for personalized advice and second opinions on complex cases.</p>
               </div>
             </div>
           </div>
         </section>
         <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
-            <div className="space-y-2">
+            <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">Simple Steps to a Healthier Harvest</h2>
               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Follow our easy three-step process to start protecting your crops today.
@@ -124,6 +168,93 @@ export default function Home() {
                   </div>
                 </li>
               </ol>
+            </div>
+          </div>
+        </section>
+         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Testimonials</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What Our Farmers Say</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Hear from farmers who have successfully used CropDoc AI to protect their fields and increase their yields.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:gap-12">
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center gap-4">
+                    {testimonial1Avatar && <Avatar>
+                      <AvatarImage src={testimonial1Avatar.imageUrl} alt={testimonial1Avatar.description} />
+                      <AvatarFallback>SJ</AvatarFallback>
+                    </Avatar>}
+                    <div>
+                      <CardTitle className="text-lg">Sarah J.</CardTitle>
+                      <p className="text-sm text-muted-foreground">Tomato Farmer</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <blockquote className="text-lg font-medium leading-relaxed">
+                    “CropDoc AI has been a game-changer for my farm. I caught a blight outbreak early and saved my entire tomato crop. The treatment advice was spot-on!”
+                  </blockquote>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center gap-4">
+                     {testimonial2Avatar && <Avatar>
+                      <AvatarImage src={testimonial2Avatar.imageUrl} alt={testimonial2Avatar.description} />
+                      <AvatarFallback>MR</AvatarFallback>
+                    </Avatar>}
+                    <div>
+                      <CardTitle className="text-lg">Mike R.</CardTitle>
+                      <p className="text-sm text-muted-foreground">Corn Farm Owner</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <blockquote className="text-lg font-medium leading-relaxed">
+                    “I used to spend hours trying to identify diseases. Now, I just snap a photo and get an answer in seconds. It’s saved me time, money, and a lot of stress.”
+                  </blockquote>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+        <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Frequently Asked Questions</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Have questions? We've got answers.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-3xl">
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-lg">How accurate is the AI diagnosis?</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Our AI models are trained on millions of images of plant diseases and achieve over 95% accuracy in our tests. However, it should be used as a tool to assist your judgment, not replace it. For critical cases, we always recommend consulting a human expert.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="text-lg">What types of crops are supported?</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    CropDoc AI supports a wide variety of crops, including corn, wheat, tomatoes, potatoes, apples, and grapes. We are continuously adding more crops to our database. If your crop isn't listed, you can select "Other" and our AI will still attempt a diagnosis.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger className="text-lg">Is my data secure?</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Yes, we take data privacy and security very seriously. All uploaded images and farm data are encrypted and stored securely. We do not share your personal data with third parties without your consent. Please refer to our Privacy Policy for more details.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>
