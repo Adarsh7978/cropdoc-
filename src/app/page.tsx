@@ -74,60 +74,72 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:max-w-none mt-12">
-              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
-                <div className="flex items-center gap-3 mb-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Microscope className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-lg font-bold font-headline">Instant Diagnosis</h3>
+              <Link href="/signup" className="block h-full">
+                <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all h-full">
+                  <div className="flex items-center gap-3 mb-2">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <Microscope className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-lg font-bold font-headline">Instant Diagnosis</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Upload a photo of your crop to get an AI-powered disease diagnosis with high accuracy in seconds.</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Upload a photo of your crop to get an AI-powered disease diagnosis with high accuracy in seconds.</p>
-              </div>
-              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
-                <div className="flex items-center gap-3 mb-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                     <BrainCircuit className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-lg font-bold font-headline">AI-Driven Advice</h3>
+              </Link>
+              <Link href="/signup" className="block h-full">
+                <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all h-full">
+                  <div className="flex items-center gap-3 mb-2">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                       <BrainCircuit className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-lg font-bold font-headline">AI-Driven Advice</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Receive tailored treatment and prevention strategies based on the diagnosis and local environmental data.</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Receive tailored treatment and prevention strategies based on the diagnosis and local environmental data.</p>
-              </div>
-              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
-                <div className="flex items-center gap-3 mb-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                     <ShieldCheck className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-lg font-bold font-headline">Proactive Alerts</h3>
+              </Link>
+              <Link href="/signup" className="block h-full">
+                <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all h-full">
+                  <div className="flex items-center gap-3 mb-2">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                       <ShieldCheck className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-lg font-bold font-headline">Proactive Alerts</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Get notified about potential disease outbreaks based on real-time weather and IoT data from your farm.</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Get notified about potential disease outbreaks based on real-time weather and IoT data from your farm.</p>
-              </div>
-              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
-                <div className="flex items-center gap-3 mb-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                     <History className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-lg font-bold font-headline">Historical Tracking</h3>
+              </Link>
+              <Link href="/signup" className="block h-full">
+                <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all h-full">
+                  <div className="flex items-center gap-3 mb-2">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                       <History className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-lg font-bold font-headline">Historical Tracking</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Maintain a record of all diagnoses to track disease history and the effectiveness of treatments over time.</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Maintain a record of all diagnoses to track disease history and the effectiveness of treatments over time.</p>
-              </div>
-              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
-                <div className="flex items-center gap-3 mb-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                     <BarChart className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-lg font-bold font-headline">Environmental Monitoring</h3>
+              </Link>
+              <Link href="/signup" className="block h-full">
+                <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all h-full">
+                  <div className="flex items-center gap-3 mb-2">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                       <BarChart className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-lg font-bold font-headline">Environmental Monitoring</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Connect your farm's IoT sensors to monitor key environmental factors like humidity, temperature, and soil moisture.</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Connect your farm's IoT sensors to monitor key environmental factors like humidity, temperature, and soil moisture.</p>
-              </div>
-              <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all">
-                <div className="flex items-center gap-3 mb-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                     <Bot className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-lg font-bold font-headline">Expert Consultation</h3>
+              </Link>
+              <Link href="/signup" className="block h-full">
+                <div className="grid gap-2 p-4 rounded-lg hover:bg-background transition-all h-full">
+                  <div className="flex items-center gap-3 mb-2">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                       <Bot className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-lg font-bold font-headline">Expert Consultation</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Chat with agricultural experts for personalized advice and second opinions on complex cases.</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Chat with agricultural experts for personalized advice and second opinions on complex cases.</p>
-              </div>
+              </Link>
             </div>
           </div>
         </section>
@@ -215,5 +227,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
