@@ -3,20 +3,10 @@
  * @fileOverview A Genkit flow for having a conversation with an AI agricultural expert.
  *
  * - consultExpert - A function that handles the conversation.
- * - ConsultExpertMessage - The type for a single message in the conversation.
  */
 
 import { ai } from '@/ai/genkit';
-import { z } from 'genkit';
-
-export const ConsultExpertMessageSchema = z.object({
-  role: z.enum(['user', 'model']),
-  content: z.string(),
-});
-export type ConsultExpertMessage = z.infer<typeof ConsultExpertMessageSchema>;
-
-const ConsultExpertInputSchema = z.array(ConsultExpertMessageSchema);
-const ConsultExpertOutputSchema = z.string();
+import { ConsultExpertInputSchema, ConsultExpertOutputSchema, type ConsultExpertMessage } from '@/ai/schemas/consult-expert';
 
 
 export async function consultExpert(messages: ConsultExpertMessage[]): Promise<string> {

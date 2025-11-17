@@ -8,7 +8,8 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Send, Paperclip, Phone, Loader2 } from "lucide-react";
 import { ScrollArea } from "./ui/scroll-area";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
-import { consultExpert, ConsultExpertMessage } from "@/ai/flows/consult-expert";
+import { consultExpert } from "@/ai/flows/consult-expert";
+import type { ConsultExpertMessage } from "@/ai/schemas/consult-expert";
 
 export function ConsultChat() {
   const [messages, setMessages] = useState<ConsultExpertMessage[]>([
