@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A beautiful farm field at sunrise, representing hope and agriculture.",
+      "imageUrl": "https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXJtJTIwZmllbGR8ZW58MHx8fHwxNzYzMzE0MjY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "farm field"
+    },
+    {
+      "id": "user-avatar",
+      "description": "A generic avatar for a user.",
+      "imageUrl": "https://images.unsplash.com/photo-1531123414780-f74242c2b052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzMjU2MDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "user-avatar-sm",
+      "description": "A small generic avatar for a user.",
+      "imageUrl": "https://images.unsplash.com/photo-1531123414780-f74242c2b052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzMjU2MDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "expert-avatar",
+      "description": "A generic avatar for an expert.",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjMyNzg3OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "expert-avatar-sm",
+      "description": "A small generic avatar for an expert.",
+      "imageUrl": "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjMyNzg3OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "hist1",
+      "description": "A close-up of a tomato leaf with late blight.",
+      "imageUrl": "https://images.unsplash.com/photo-1659490147465-1d333021dd81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkaXNlYXNlZCUyMGxlYWZ8ZW58MHx8fHwxNzYzMzI1MTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "diseased leaf"
+    },
+    {
+      "id": "hist2",
+      "description": "A corn leaf showing signs of common rust.",
+      "imageUrl": "https://images.unsplash.com/photo-1582280683163-224fd1c2edd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaXNlYXNlZCUyMGxlYWZ8ZW58MHx8fHwxNzYzMzI1MTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "diseased leaf"
+    },
+    {
+      "id": "hist3",
+      "description": "A potato leaf with early blight spots.",
+      "imageUrl": "https://images.unsplash.com/photo-1606782998290-ae137b816d55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaXNlYXNlZCUyMGxlYWZ8ZW58MHx8fHwxNzYzMzI1MTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "diseased leaf"
+    },
+    {
+      "id": "hist4",
+      "description": "A healthy, green leaf.",
+      "imageUrl": "https://images.unsplash.com/photo-1763027065033-e1ad8f3d1cfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoZWFsdGh5JTIwbGVhZnxlbnwwfHx8fDE3NjMzNTg4Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "healthy leaf"
+    },
+    {
+      "id": "hist5",
+      "description": "An apple leaf with scab lesions.",
+      "imageUrl": "https://images.unsplash.com/photo-1647003021174-a2cfbb4d49a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkaXNlYXNlZCUyMGxlYWZ8ZW58MHx8fHwxNzYzMzI1MTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "diseased leaf"
+    }
+  ]
 }
