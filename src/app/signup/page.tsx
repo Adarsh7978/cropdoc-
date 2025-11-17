@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -35,7 +36,7 @@ export default function SignupPage() {
             </div>
             <div className="grid gap-2">
                 <Label htmlFor="location">Location</Label>
-                <Input id="location" placeholder="e.g., California, USA" required />
+                <Input id="location" placeholder="e.g., M.P., India" required />
             </div>
              <div className="grid gap-2">
               <Label htmlFor="cropType">Primary Crop Type</Label>
