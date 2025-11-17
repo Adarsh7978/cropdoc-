@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -24,6 +24,10 @@ export default function UploadPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
+  const showToast = useCallback((...args: Parameters<typeof toast>) => {
+    toast(...args);
+  }, [toast]);
+
   useEffect(() => {
     const getCameraPermission = async () => {
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
@@ -40,7 +44,7 @@ export default function UploadPage() {
       } catch (error) {
         console.error("Error accessing camera:", error);
         setHasCameraPermission(false);
-        toast({
+        showToast({
           variant: "destructive",
           title: "Camera Access Denied",
           description: "Please enable camera permissions in your browser settings to use the camera feature.",
@@ -56,7 +60,7 @@ export default function UploadPage() {
             stream.getTracks().forEach(track => track.stop());
         }
     };
-  }, [toast]);
+  }, [showToast]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -223,5 +227,3 @@ export default function UploadPage() {
     </div>
   );
 }
-
-    
