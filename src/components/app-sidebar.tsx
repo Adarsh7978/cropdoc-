@@ -1,7 +1,8 @@
+
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Leaf, LayoutDashboard, Stethoscope, MessageSquare } from "lucide-react";
+import { Leaf, LayoutDashboard, Stethoscope, MessageSquare, Upload } from "lucide-react";
 import {
   Sidebar,
   SidebarHeader,
@@ -23,6 +24,7 @@ export function AppSidebar() {
     { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
     { href: "/diagnose", label: "Diagnose", icon: Stethoscope },
     { href: "/consult", label: "Consult Expert", icon: MessageSquare },
+    { href: "/upload", label: "Upload", icon: Upload },
   ];
 
   return (
