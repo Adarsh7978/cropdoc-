@@ -9,8 +9,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export default function Home() {
   const heroImage = getPlaceholderImage("hero");
-  const testimonial1Avatar = getPlaceholderImage("testimonial1-avatar");
-  const testimonial2Avatar = getPlaceholderImage("testimonial2-avatar");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -25,9 +23,6 @@ export default function Home() {
           </Link>
           <Link href="#how-it-works" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             How It Works
-          </Link>
-          <Link href="#testimonials" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Testimonials
           </Link>
            <Link href="#faq" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             FAQ
@@ -171,60 +166,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Testimonials</div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">What Our Farmers Say</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Hear from farmers who have successfully used CropDoc AI to protect their fields and increase their yields.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:gap-12">
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    {testimonial1Avatar && <Avatar>
-                      <AvatarImage src={testimonial1Avatar.imageUrl} alt={testimonial1Avatar.description} />
-                      <AvatarFallback>SJ</AvatarFallback>
-                    </Avatar>}
-                    <div>
-                      <CardTitle className="text-lg">Sarah J.</CardTitle>
-                      <p className="text-sm text-muted-foreground">Tomato Farmer</p>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <blockquote className="text-lg font-medium leading-relaxed">
-                    “CropDoc AI has been a game-changer for my farm. I caught a blight outbreak early and saved my entire tomato crop. The treatment advice was spot-on!”
-                  </blockquote>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                     {testimonial2Avatar && <Avatar>
-                      <AvatarImage src={testimonial2Avatar.imageUrl} alt={testimonial2Avatar.description} />
-                      <AvatarFallback>MR</AvatarFallback>
-                    </Avatar>}
-                    <div>
-                      <CardTitle className="text-lg">Mike R.</CardTitle>
-                      <p className="text-sm text-muted-foreground">Corn Farm Owner</p>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <blockquote className="text-lg font-medium leading-relaxed">
-                    “I used to spend hours trying to identify diseases. Now, I just snap a photo and get an answer in seconds. It’s saved me time, money, and a lot of stress.”
-                  </blockquote>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-        <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
           <div className="container px-4 md:px-6">
              <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
@@ -273,3 +215,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
