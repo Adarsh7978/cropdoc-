@@ -22,9 +22,9 @@ export function AppSidebar() {
 
   const menuItems = [
     { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-    { href: "/diagnose", label: "Diagnose", icon: Stethoscope },
+    { href: "/upload", label: "Quick Diagnosis", icon: Upload },
+    { href: "/diagnose", label: "Detailed Diagnosis", icon: Stethoscope },
     { href: "/consult", label: "Consult Expert", icon: MessageSquare },
-    { href: "/upload", label: "Upload", icon: Upload },
   ];
 
   return (
