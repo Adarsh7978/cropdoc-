@@ -3,3 +3,4 @@ config();
 
 import '@/ai/flows/diagnose-crop-disease.ts';
 import '@/ai/flows/recommend-treatment.ts';
+import '@/ai/flows/consult-expert.ts';
