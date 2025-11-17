@@ -7,7 +7,7 @@ export const diagnosisHistory = [
     diseaseName: "Tomato Late Blight",
     severityLevel: "High",
     date: "2024-07-18",
-    confidenceScore: 0.95,
+    confidenceScore: 0.92,
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const diagnosisHistory = [
     diseaseName: "Corn Common Rust",
     severityLevel: "Medium",
     date: "2024-07-15",
-    confidenceScore: 0.82,
+    confidenceScore: 0.85,
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const diagnosisHistory = [
     diseaseName: "Apple Scab",
     severityLevel: "Medium",
     date: "2024-07-08",
-    confidenceScore: 0.76,
+    confidenceScore: 0.78,
   },
 ];
 
